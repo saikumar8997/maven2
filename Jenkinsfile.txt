@@ -20,13 +20,7 @@ pipeline {
                 steps{
                  bat "mvn install -f maven2/my-app"
                  }
-                 }
-                 stage('Deploy'){
-                 steps{
-                   bat "mvn deploy -f maven2/my-app"
-                   }
-                   }
-            
+                 }   
         }
     }
 

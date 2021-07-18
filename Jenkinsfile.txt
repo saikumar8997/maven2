@@ -12,9 +12,9 @@ pipeline {
                 bat "mvn test -f maven2/my-app"
             }
         }
-        stage('Deploy') { 
+        stage('package') { 
             steps {
-               bat "mvn packge -f maven2/my-app"
+               bat "mvn package -f maven2/my-app"
             }
         }
     }

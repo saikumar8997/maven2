@@ -1,0 +1,21 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                bat "git clone https://github.com/saikumar8997/maven2.git"
+                bat "mvn clean -f maven2/my-app"
+            }
+        }
+        stage('Test') { 
+            steps {
+                bat "mvn test -f maven2/my-app"
+            }
+        }
+        stage('Deploy') { 
+            steps {
+               bat "mvn packge -f maven2/my-app"
+            }
+        }
+    }
+}

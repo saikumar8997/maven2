@@ -3,8 +3,6 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                bat "rm -rf maven2/my-app"
-                bat "git clone https://github.com/saikumar8997/maven2.git"
                 bat "mvn clean -f maven2/my-app"
             }
         }
